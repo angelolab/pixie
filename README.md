@@ -1,6 +1,6 @@
 # Pixie
 
-Pipeline for pixel clustering and cell clustering of multiplexed imaging data as described in [Liu et al. Robust phenotyping of highly multiplexed tissue imaging data using pixel-level clustering](https://doi.org/10.1101/2022.08.16.504171).
+Pipeline for pixel clustering and cell clustering of multiplexed imaging data as described in [Liu et al. Robust phenotyping of highly multiplexed tissue imaging data using pixel-level clustering](https://www.nature.com/articles/s41467-023-40068-5).
 
 **For a maintained version of the codebase, please see https://github.com/angelolab/ark-analysis.** The codebase in this repository reflects a static version of the pipeline as described in Liu et al., but is not actively maintained.
 
@@ -9,7 +9,7 @@ Pipeline for pixel clustering and cell clustering of multiplexed imaging data as
   - [Overview](#overview)
     - [1. Pixel clustering with Pixie](#1-pixel-clustering-with-pixie)
     - [2. Cell clustering with Pixie](#2-cell-clustering-with-pixie)
-  - [Installation Steps.](#installation-steps)
+  - [Installation Steps](#installation-steps)
     - [Download the Repo](#download-the-repo)
     - [Setting up Docker](#setting-up-docker)
     - [Using the Repository (Running the Docker)](#using-the-repository-running-the-docker)
@@ -25,10 +25,10 @@ Pipeline for pixel clustering and cell clustering of multiplexed imaging data as
 This repo contains a pipeline for pixel clustering and cell clustering of multiplexed imaging data. The assumption is that you've already performed any necessary image processing on your data (such as denoising, background subtraction, autofluorescence correction, etc), and that it is ready to be analyzed. 
 
 #### 1. Pixel clustering with Pixie  
-The first step in the [Pixie](https://www.biorxiv.org/content/10.1101/2022.08.16.504171) pipeline is to run the [**pixel clustering notebook**](./templates/1_Pixie_Cluster_Pixels.ipynb). The notebook walks you through the process of generating pixel clusters for your data, and lets you specify what markers to use for the clustering, train a model, use it to classify your entire dataset, and generate pixel cluster overlays. The notebook includes a GUI for manual cluster adjustment and annotation. [Workshop Talk - Session IV - Pixel Level Analysis](https://youtu.be/e7C1NvaPLaY)
+The first step in the [Pixie](https://www.nature.com/articles/s41467-023-40068-5) pipeline is to run the [**pixel clustering notebook**](./templates/1_Pixie_Cluster_Pixels.ipynb). The notebook walks you through the process of generating pixel clusters for your data, and lets you specify what markers to use for the clustering, train a model, use it to classify your entire dataset, and generate pixel cluster overlays. The notebook includes a GUI for manual cluster adjustment and annotation. [Workshop Talk - Session IV - Pixel Level Analysis](https://youtu.be/e7C1NvaPLaY)
 
 #### 2. Cell clustering with Pixie  
-The second step in the [Pixie](https://www.biorxiv.org/content/10.1101/2022.08.16.504171) pipeline is to run the [**cell clustering notebook**](./templates/2_Pixie_Cluster_Cells.ipynb). This notebook will use the pixel clusters generated in the first notebook to cluster the cells in your dataset. The notebook walks you through generating cell clusters for your data and generates cell cluster overlays. The notebook includes a GUI for manual cluster adjustment and annotation. [Workshop Talk - Session V - Cell-level Analysis - Part 2: Cell Clustering](https://youtu.be/4_AJxrxPYlk?t=2704)
+The second step in the [Pixie](https://www.nature.com/articles/s41467-023-40068-5) pipeline is to run the [**cell clustering notebook**](./templates/2_Pixie_Cluster_Cells.ipynb). This notebook will use the pixel clusters generated in the first notebook to cluster the cells in your dataset. The notebook walks you through generating cell clusters for your data and generates cell cluster overlays. The notebook includes a GUI for manual cluster adjustment and annotation. [Workshop Talk - Session V - Cell-level Analysis - Part 2: Cell Clustering](https://youtu.be/4_AJxrxPYlk?t=2704)
 
 
 ### Installation Steps
@@ -79,7 +79,7 @@ If you are using Windows, please consult our [Windows guide](https://ark-analysi
 
 #### Pip Installation
 
-While we reocmmend users to use docker, if you choose to use this pipeline outside of docker, you can install `ark` using pip:
+While we recommend users to use docker, if you choose to use this pipeline outside of docker, you can install `ark` using pip:
 
 ```sh
 pip install ark-analysis==0.6.4
